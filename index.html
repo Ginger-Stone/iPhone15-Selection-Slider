@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone 15 UI/UX Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="header">
+        <img class="logo" src="./images/apple.png" />
+        <h1>iPhone</h1>
+      </div>
+      <div class="description">
+        <h3>Apple iPhone 15 Pro</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit
+          repellendus molestiae accusantium totam odio.
+        </p>
+        <p class="price">$930.00</p>
+        <div class="actions">
+          <button onclick="focusOn('slide0')">
+            <span class="square blue"></span>Blue
+          </button>
+          <button onclick="focusOn('slide1')">
+            <span class="square green"></span>Green
+          </button>
+          <button onclick="focusOn('slide2')">
+            <span class="square pink"></span>Pink
+          </button>
+          <button onclick="focusOn('slide0')">
+            <span class="square blue"></span>Blue
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="phone-slider">
+      <div id="slide0" class="slide-item focus">
+        <img src="./images/blue.png" alt="" />
+      </div>
+      <div id="slide1" class="slide-item unfocus unfocusTop">
+        <img src="./images/green.png" alt="" />
+      </div>
+      <div id="slide2" class="slide-item unfocus unfocusBottom">
+        <img src="./images/pink.png" alt="" />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

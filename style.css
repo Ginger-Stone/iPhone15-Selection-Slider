@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+:root {
+  --color-gray: rgb(65, 83, 95);
+  --color-blue: rgb(113, 176, 218);
+  --color-green: hsl(150, 69%, 89%);
+  --color-pink: hsl(339, 66%, 47%);
+}
+
+body {
+  background-image: url("./images/black-paper.png");
+  background-repeat: repeat;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  /* background-image: radial-gradient(
+    closest-side at 60% 55%,
+    var(--color-blue),
+    var(--color-gray)
+  ); */
+  font-size: 20px;
+}
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(65, 83, 95, 0.9);
+  background-image: radial-gradient(
+    closest-side at 60% 55%,
+    rgba(113, 176, 218, 0.4),
+    rgba(65, 83, 95, 0.7)
+  );
+}
+
+.content {
+  width: 30%;
+  margin-left: 20%;
+}
+
+.logo {
+  width: 40px;
+}
+h1 {
+  display: inline-block;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  width: 50%;
+  font-size: 0.5em;
+  line-height: 1.4em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.price {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+span.square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 5px;
+}
+span.blue {
+  background-color: var(--color-blue);
+}
+span.green {
+  background-color: var(--color-green);
+}
+span.pink {
+  background-color: var(--color-pink);
+}
+#phone-slider {
+  width: 45%;
+  position: relative;
+  height: 100vh;
+}
+#slide0,
+#slide1,
+#slide2 {
+  position: absolute;
+}
+
+.focus {
+  height: 70%;
+  top: 15%;
+  transition: all 500ms ease-in-out 500ms;
+}
+
+.unfocus {
+  height: 20%;
+  right: 10%;
+  /* Add the blur effect */
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  transition: all 500ms ease-in-out 500ms;
+}
+
+.unfocusTop {
+  top: 10%;
+}
+
+.unfocusBottom {
+  bottom: 10%;
+}
+
+#phone-slider img {
+  height: 100%;
+}
