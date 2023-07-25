@@ -101,10 +101,22 @@ span.pink {
   position: absolute;
 }
 
+.unfocusTop {
+  top: 10%;
+  /* transition: all 1s ease; */
+}
+
+.unfocusBottom {
+  bottom: 10%;
+  /* transition: all 1s ease; */
+}
+
 .focus {
   height: 70%;
   top: 15%;
-  transition: all 500ms ease-in-out 500ms;
+  /* transition: all 1s ease; */
+  animation-name: inFocus;
+  animation-duration: 2s;
 }
 
 .unfocus {
@@ -113,17 +125,41 @@ span.pink {
   /* Add the blur effect */
   filter: blur(3px);
   -webkit-filter: blur(3px);
-  transition: all 500ms ease-in-out 500ms;
-}
-
-.unfocusTop {
-  top: 10%;
-}
-
-.unfocusBottom {
-  bottom: 10%;
+  /* transition: all 1s ease; */
+  animation-name: outFocus;
+  animation-duration: 2s;
 }
 
 #phone-slider img {
   height: 100%;
+}
+
+@keyframes inFocus {
+  from {
+    height: 20%;
+    right: 10%;
+    /* Add the blur effect */
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    /* transition: all 1s ease; */
+  }
+  to {
+    height: 70%;
+    top: 15%;
+  }
+}
+
+@keyframes outFocus {
+  from {
+    height: 70%;
+    top: 15%;
+  }
+  to {
+    height: 20%;
+    right: 10%;
+    /* Add the blur effect */
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    transition: all 1s ease;
+  }
 }
